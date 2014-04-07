@@ -1,0 +1,13 @@
+.reaction-data ul li button {
+  -webkit-appearance: none;
+  background: #666666;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Impact", sans-serif;
+  border: 0;
+  padding: 10px;
+}
+.reaction-data ul li button.active {
+  background: #ff3300;
+}
