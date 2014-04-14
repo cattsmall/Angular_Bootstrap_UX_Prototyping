@@ -1,7 +1,7 @@
 <!doctype html>
-<html ng-app="myAngularApp" ng-controller="appController">
+<html>
   <head>
-    <title>{{myApp.name}} - {{myApp.description}}</title>
+    <title></title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="lib/stylesheets/styles.css" charset="utf-8">
     <!-- Angular must be included in the head so that the templates work properly -->
@@ -11,6 +11,57 @@
 	  <script src="lib/scripts/controllers.js"></script>
   </head>
   <body>
- woo
+    <!-- Navigation -->
+    <header class="navbar navbar-inverse navbar-fixed-top">
+      <a class="navbar-brand">Network A</a>
+    </header>
+    <!-- Video + Details -->
+    <section class="video-container container">
+      <!-- Video player -->
+      <div class="video-player">
+      </div>
+      
+      <!-- Title + facepile -->
+      <div class="video-header">
+        <h1>This is a video title</h1>
+        <aside class="facepile">
+          Catt and 3 others are into this.
+        </aside>
+      </div>
+      
+      <!-- Source + social -->
+      <div class="video-source-social">
+        <section class="video-source">
+          Network A
+        </section>
+        <ul class="social-media-widget">
+          <li>Facebook</li>
+        </ul>
+      </div>
+      
+      <!-- Description -->
+      <div class="video-description">
+        <p>This is a description!!!</p>
+      </div>
+    </section>
+    
+    <!-- Related -->
+    <section class="related-content">
+    </section>
+    
+    <!-- Community -->
+    <section class="comments-reactions">
+      <!-- Comments -->
+      <div class="comments">
+      </div>
+      <!-- Reactions -->
+      <div class="rection-graph">
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      Footer
+    </footer>
   </body>
 </html>
