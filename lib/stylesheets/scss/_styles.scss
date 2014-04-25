@@ -1,0 +1,27 @@
+body {
+  padding-top:51px;
+  background: $black;
+  color: $white;
+}
+
+.video-player {
+  img {
+    width:100%;
+  }
+}
+
+img {
+  max-width:100%;
+}
+
+.video-header {
+  @include clearfix;
+}
+
+.facepile {
+  img {
+    width:36px;
+    display:inline-block;
+    margin-left:-4px;
+  }
+}
