@@ -10,10 +10,10 @@
 	  <script src="lib/scripts/app.js"></script>
 	  <script src="lib/scripts/controllers.js"></script>
   </head>
-  <body>
+  <body ng-app="myAngularApp" ng-controller="appController">
     <!-- Navigation -->
     <header class="navbar navbar-inverse navbar-fixed-top">
-      <a class="navbar-brand">Network A</a>
+      <a class="navbar-brand" href="#">Network A</a>
     </header>
     <!-- Video + Details -->
     <section class="video-container container">
@@ -24,28 +24,30 @@
       
       <!-- Title + facepile -->
       <div class="video-header">
-        <h1 class="col-md-8">This is a video title</h1>
-        <aside class="facepile col-md-4 text-right">
-          <img src="lib/images/128.jpg">
-          <img src="lib/images/128-1.jpg">
-          <img src="lib/images/128-2.jpg">
-          <p>Catt and 3 others are into this.</p>
+        <h1 class="col-md-8">{{video.title}}</h1>
+        <aside class="facepile col-md-4 text-right" ng-if="{{video.actions.users}}">
+          <ul>
+            <li>{{video.actions.users.0}}</li>
+            <li>{{video.actions.users.1}}</li>
+            <li>{{video.actions.users.2}}</li>
+          </ul>
+          <p>{{video.actions.users.0}} and 3 others are into this.</p>
         </aside>
       </div>
       
       <!-- Source + social -->
       <div class="video-source-social">
         <section class="video-source">
-          Network A
+          {{video.source}}
         </section>
-        <ul class="social-media-widget">
-          <li>Facebook</li>
+        <ul class="social-media-widgets">
+          <li></li>
         </ul>
       </div>
       
       <!-- Description -->
       <div class="video-description">
-        <p>This is a description!!!</p>
+        <p>{{video.description}}</p>
       </div>
     </section>
     
