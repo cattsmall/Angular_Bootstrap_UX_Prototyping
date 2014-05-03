@@ -3,3 +3,5 @@ config.codekit
 .sass-cache/
 
 *.scssc
+
+.DS_Store

@@ -25,20 +25,18 @@
       <!-- Title + facepile -->
       <div class="video-header">
         <h1 class="col-md-8">{{video.title}}</h1>
-        <aside class="facepile col-md-4 text-right" ng-if="{{video.actions.users}}">
+        <aside class="facepile col-md-4 text-right" ng-if="video.actions">
           <ul>
-            <li>{{video.actions.users.0}}</li>
-            <li>{{video.actions.users.1}}</li>
-            <li>{{video.actions.users.2}}</li>
+            <li ng-repeat="user in video.actions"><img ng-src="lib/images/user-{{user.id}}.jpg"></li>
           </ul>
-          <p>{{video.actions.users.0}} and 3 others are into this.</p>
+          <p>{{video.actions.1.name}} and 3 others are into this.</p>
         </aside>
       </div>
       
       <!-- Source + social -->
       <div class="video-source-social">
         <section class="video-source">
-          {{video.source}}
+          {{video.source.name}}
         </section>
         <ul class="social-media-widgets">
           <li></li>
