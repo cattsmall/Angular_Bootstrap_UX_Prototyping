@@ -5196,16 +5196,34 @@ body {
 .video-player img {
   width: 100%; }
 
-img {
-  max-width: 100%; }
+.video-header {
+  border-bottom: 1px #555555 dotted;
+  padding-bottom: 15px;
+  margin-bottom: 15px; }
+  .video-header h1 {
+    padding-left: 0; }
 
-.video-header:before, .video-header:after {
-  content: " ";
-  display: table; }
-.video-header:after {
-  clear: both; }
+.facepile {
+  margin-top: 30px;
+  padding-right: 0; }
+  .facepile img {
+    width: 36px; }
 
-.facepile img {
-  width: 36px;
-  display: inline-block;
-  margin-left: -4px; }
+.video-source-social h2 {
+  margin: 0;
+  padding-left: 0; }
+  .video-source-social h2 em {
+    display: block;
+    font-size: .9em;
+    color: #555555; }
+.video-source-social .social-media-widgets li {
+  border-left: 1px solid #555555;
+  padding: 15px; }
+  .video-source-social .social-media-widgets li .btn-inverse {
+    background: none;
+    color: #555555; }
+    .video-source-social .social-media-widgets li .btn-inverse:hover {
+      color: white; }
+
+.video-description {
+  padding: 20px 0; }

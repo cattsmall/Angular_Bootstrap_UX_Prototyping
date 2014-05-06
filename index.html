@@ -16,30 +16,49 @@
       <a class="navbar-brand" href="#">Network A</a>
     </header>
     <!-- Video + Details -->
-    <section class="video-container container">
+    <section class="container">
       <!-- Video player -->
       <div class="video-player">
         <img src="lib/images/video.png">
       </div>
       
       <!-- Title + facepile -->
-      <div class="video-header">
+      <div class="video-header clearfix">
         <h1 class="col-md-8">{{video.title}}</h1>
         <aside class="facepile col-md-4 text-right" ng-if="video.actions">
-          <ul>
+          <ul class="list-inline">
             <li ng-repeat="user in video.actions"><img ng-src="lib/images/user-{{user.id}}.jpg"></li>
           </ul>
-          <p>{{video.actions.1.name}} and 3 others are into this.</p>
+          <p>{{video.actions.1.name}} and 3 others are into this</p>
         </aside>
       </div>
       
       <!-- Source + social -->
-      <div class="video-source-social">
-        <section class="video-source">
+      <div class="video-source-social clearfix">
+        <h2 class="video-source col-md-4">
           {{video.source.name}}
-        </section>
-        <ul class="social-media-widgets">
-          <li></li>
+          <em>{{video.source.videos_count}} videos</em>
+        </h2>
+        <ul class="social-media-widgets col-md-8 list-inline text-right">
+          <li>
+            <button type="button" class="btn btn-inverse">Facebook</button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-inverse">Twitter</button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-inverse">Share</button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-inverse">Comments</button>
+          </li>
+          <li>
+            <strong>{{video.views_count}}</strong>
+            Views
+          </li>
+          <li>
+            <button type="button" class="btn btn-primary">Like</button>
+          </li>
         </ul>
       </div>
       
@@ -62,10 +81,5 @@
       <div class="rection-graph">
       </div>
     </section>
-    
-    <!-- Footer -->
-    <footer class="footer">
-      Footer
-    </footer>
   </body>
 </html>

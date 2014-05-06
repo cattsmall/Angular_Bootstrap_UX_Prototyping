@@ -10,18 +10,54 @@ body {
   }
 }
 
-img {
-  max-width:100%;
-}
-
 .video-header {
-  @include clearfix;
+  border-bottom:1px $gray dotted;
+  padding-bottom:15px;
+  margin-bottom:15px;
+  
+  h1 {
+    padding-left:0;
+  }
 }
 
 .facepile {
+  margin-top:30px;
+  padding-right:0;
+  
   img {
     width:36px;
-    display:inline-block;
-    margin-left:-4px;
   }
+}
+
+.video-source-social {
+  h2 {
+    margin:0;
+    padding-left:0;
+    
+    em {
+      display:block;
+      font-size:.9em;
+      color:$gray;
+    }
+  }
+  
+  .social-media-widgets {
+    li {
+      border-left:1px solid $gray;
+      padding:15px;
+      
+      .btn-inverse {
+        background:none;
+        color:$gray;
+      
+        &:hover {
+          color:$white;
+        }
+      }
+    }
+  }
+}
+
+.video-description {
+  padding:20px 0;
 }
