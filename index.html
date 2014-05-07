@@ -69,17 +69,48 @@
     </section>
     
     <!-- Related -->
-    <section class="related-content">
+    <section class="related-content" ng-controller="relatedContentController" ng-class="{'show-all-streams' : showAllStreams}">
+      <div class="container related-content-container" ng-repeat="related in relatedContent">
+        <h3>
+          {{related.name}}
+          <strong>({{related.videos_count}})</strong>
+        </h3>
+        <carousel>
+          <slide ng-repeat="slide in related.slides" active="slide.active">
+            <ul class="list-inline">
+              <li ng-repeat="video in slide.videos">
+                <img ng-src="lib/images/video-{{video.id}}.jpg">
+                <div class="carousel-caption">
+                  <h4>{{video.title}}</h4>
+                </div>
+              </li>
+            </ul>
+          </slide>
+        </carousel>
+      </div>
+      <button class="btn btn-inverse" ng-click="toggleStreamVisibility();">
+        <span ng-if="!showAllStreams">More</span>
+        <span ng-if="showAllStreams">Less</span>
+        Related Streams
+      </button>
     </section>
     
     <!-- Community -->
     <section class="comments-reactions">
-      <!-- Comments -->
-      <div class="comments">
-      </div>
-      <!-- Reactions -->
-      <div class="rection-graph">
+      <div class="container">
+        <!-- Comments -->
+        <div class="comments col-md-8">
+          <h3>Facebook Responses</h3>
+        </div>
+        <!-- Reactions -->
+        <aside class="rection-graph col-md-4">
+          <h3>What Are People Saying?</h3>
+        </aside>
       </div>
     </section>
+    
+    <footer class="footer">
+      Footer
+    </footer>
   </body>
 </html>

@@ -5227,3 +5227,72 @@ body {
 
 .video-description {
   padding: 20px 0; }
+
+.related-content {
+  position: relative;
+  overflow: hidden;
+  max-height: 500px;
+  -webkit-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  transition: max-height 0.5s; }
+  .related-content.show-all-streams {
+    max-height: 900px; }
+  .related-content .related-content-container {
+    margin-bottom: 70px; }
+  .related-content h3 strong {
+    color: #555555;
+    font-size: .9em; }
+  .related-content .carousel-inner ul {
+    margin: 0;
+    text-align: left; }
+    .related-content .carousel-inner ul li {
+      position: relative;
+      padding: 0;
+      width: 20%; }
+      .related-content .carousel-inner ul li h4 {
+        font-size: .9em; }
+      .related-content .carousel-inner ul li img {
+        max-width: 100%; }
+      .related-content .carousel-inner ul li:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.25);
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      .related-content .carousel-inner ul li:hover:after {
+        background: rgba(0, 0, 0, 0.5); }
+  .related-content .carousel-caption {
+    top: 0;
+    left: 10%;
+    right: 10%; }
+  .related-content .carousel-control {
+    width: 50px; }
+    .related-content .carousel-control.left {
+      left: -50px; }
+    .related-content .carousel-control.right {
+      right: -70px; }
+  .related-content .carousel-indicators {
+    display: none; }
+  .related-content .btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -80px;
+    background: none;
+    border: 2px solid white; }
+
+.btn:focus {
+  outline: none; }
+
+.comments-reactions {
+  background: white;
+  color: black; }
+  .comments-reactions h3 {
+    border-bottom: 3px solid black;
+    text-align: center;
+    padding-bottom: 20px; }

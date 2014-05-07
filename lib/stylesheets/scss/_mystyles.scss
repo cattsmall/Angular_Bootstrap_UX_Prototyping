@@ -61,3 +61,111 @@ body {
 .video-description {
   padding:20px 0;
 }
+
+.related-content {
+  position:relative;
+  overflow:hidden;
+  max-height: 500px;
+  @include transition(max-height .5s);
+  
+  &.show-all-streams {
+    max-height:900px;
+  }
+ 
+  .related-content-container {
+    margin-bottom:70px;
+  }
+  
+  h3 {
+    strong {
+      color:$gray;
+      font-size:.9em;
+    }
+  }
+  
+  .carousel-inner {
+    ul {
+      margin:0;
+      text-align:left;
+      
+      li {
+        position:relative;
+        padding:0;
+        width:20%;
+      
+        h4 {
+          font-size:.9em;
+        }
+      
+        img {
+          max-width:100%;
+        }
+        
+        &:after {
+          content:"";
+          position: absolute;
+          top:0;
+          bottom:0;
+          left:0;
+          right:0;
+          background:fade-out($black, .75);
+          @include transition(all .2s);
+        }
+        
+        &:hover {
+          &:after {
+            background:fade-out($black, .5);
+          }
+        }
+      }
+    }
+  }
+  
+  .carousel-caption {
+    top:0;
+    left: 10%;
+    right: 10%;
+  }
+  
+  .carousel-control {
+    width:50px;
+    
+    &.left {
+      left:-50px;
+    }
+    
+    &.right {
+      right:-70px;
+    }
+  }
+  
+  .carousel-indicators {
+    display:none;
+  }
+  
+  .btn {
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    margin-left:-80px;
+    background:none;
+    border:2px solid $white;
+  }
+}
+
+.btn {
+  &:focus {
+    outline:none;
+  }
+}
+
+.comments-reactions {
+  background: $white;
+  color: $black;
+  
+  h3 {
+    border-bottom:3px solid $black;
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
