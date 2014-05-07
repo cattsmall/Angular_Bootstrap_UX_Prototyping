@@ -65,7 +65,7 @@ body {
 .related-content {
   position:relative;
   overflow:hidden;
-  max-height: 500px;
+  max-height: 488px;
   @include transition(max-height .5s);
   
   &.show-all-streams {
@@ -167,5 +167,26 @@ body {
     border-bottom:3px solid $black;
     text-align:center;
     padding-bottom:20px;
+  }
+  
+  .comments {
+    font-size:.9em;
+    
+    .checkbox {
+      margin:0;
+    }
+    
+    .col-md-5, .col-md-7 {
+      padding:0;
+    }
+    
+    textarea {
+      width:100%;
+    }
+  }
+  
+  .container {
+    width:90%;
+    max-width:970px;
   }
 }

@@ -5231,7 +5231,7 @@ body {
 .related-content {
   position: relative;
   overflow: hidden;
-  max-height: 500px;
+  max-height: 488px;
   -webkit-transition: max-height 0.5s;
   -o-transition: max-height 0.5s;
   transition: max-height 0.5s; }
@@ -5296,3 +5296,14 @@ body {
     border-bottom: 3px solid black;
     text-align: center;
     padding-bottom: 20px; }
+  .comments-reactions .comments {
+    font-size: .9em; }
+    .comments-reactions .comments .checkbox {
+      margin: 0; }
+    .comments-reactions .comments .col-md-5, .comments-reactions .comments .col-md-7 {
+      padding: 0; }
+    .comments-reactions .comments textarea {
+      width: 100%; }
+  .comments-reactions .container {
+    width: 90%;
+    max-width: 970px; }
