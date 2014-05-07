@@ -8,6 +8,14 @@ body {
   img {
     width:100%;
   }
+  
+  .sharing-options {
+    
+  }
+  
+  .reactions-options {
+    
+  }
 }
 
 .video-header {
@@ -135,7 +143,7 @@ body {
     }
     
     &.right {
-      right:-70px;
+      right:-65px;
     }
   }
   
@@ -189,4 +197,9 @@ body {
     width:90%;
     max-width:970px;
   }
+}
+
+.footer {
+  padding:20px;
+  color:$gray;
 }

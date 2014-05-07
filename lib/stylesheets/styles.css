@@ -5275,7 +5275,7 @@ body {
     .related-content .carousel-control.left {
       left: -50px; }
     .related-content .carousel-control.right {
-      right: -70px; }
+      right: -65px; }
   .related-content .carousel-indicators {
     display: none; }
   .related-content .btn {
@@ -5307,3 +5307,7 @@ body {
   .comments-reactions .container {
     width: 90%;
     max-width: 970px; }
+
+.footer {
+  padding: 20px;
+  color: #555555; }

@@ -18,7 +18,31 @@
     <!-- Video + Details -->
     <section class="container">
       <!-- Video player -->
-      <div class="video-player">
+      <div class="video-player" ng-mouseover="showReactions = true" ng-mouseout="showReactions = false">
+        <ul class="sharing-options fade" ng-class="{in: showReactions}">
+          <li>
+            <button class="btn btn-primary" ng-class="{selected: reaction.selected}">
+              Facebook
+            </button>
+          </li>
+          <li>
+            <button class="btn btn-primary" ng-class="{selected: reaction.selected}">
+              Twitter
+            </button>
+          </li>
+          <li>
+            <button class="btn btn-inverse" ng-class="{selected: reaction.selected}">
+              Share
+            </button>
+          </li>
+        </ul>
+        <ul class="reactions-options fade" ng-class="{in: showReactions}">
+          <li ng-repeat="reaction in reactions">
+            <button class="btn btn-inverse" ng-class="{selected: reaction.selected}">
+              {{reaction.name}}
+            </button>
+          </li>
+        </ul>
         <img src="lib/images/video.png">
       </div>
       
@@ -127,7 +151,7 @@
       </div>
     </section>
     
-    <footer class="footer">
+    <footer class="footer text-center">
       Footer
     </footer>
   </body>
