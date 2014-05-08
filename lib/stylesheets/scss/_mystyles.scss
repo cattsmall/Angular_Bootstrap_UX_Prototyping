@@ -1,20 +1,64 @@
 body {
-  padding-top:51px;
+  padding-top:100px;
   background: $black;
   color: $white;
 }
 
 .video-player {
+  position:relative;
+  
   img {
     width:100%;
   }
   
-  .sharing-options {
+  .sharing-options, .reactions-options {
+    position:absolute;
+    top:-40px;
     
+    .btn {
+      border-radius:0;
+    }
+    
+    h3 {
+      font-size:.8em;
+      background:$gray-darker;
+      text-transform:uppercase;
+      padding:10px;
+      min-width:75px;
+      text-align:center;
+      margin:0;
+    }
+  }
+  
+  .sharing-options {
+    left:-75px;
+    
+    .btn {
+      width:100px;
+      text-align:left;
+    }
   }
   
   .reactions-options {
+    right:-60px;
     
+    .btn-inverse {
+      background:$gray-dark;
+      font-size:1.5em;
+      font-family:'Impact';
+      width:75px;
+      padding-top:15px;
+      padding-bottom:15px;
+      border-bottom:1px solid $black;
+      
+      &.selected {
+        background:$brand-danger;
+      }
+      
+      &:hover, &:focus {
+        color:$white;
+      }
+    }
   }
 }
 

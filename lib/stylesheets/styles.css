@@ -5189,12 +5189,46 @@ button.close {
   .hidden-print {
     display: none !important; } }
 body {
-  padding-top: 51px;
+  padding-top: 100px;
   background: black;
   color: white; }
 
-.video-player img {
-  width: 100%; }
+.video-player {
+  position: relative; }
+  .video-player img {
+    width: 100%; }
+  .video-player .sharing-options, .video-player .reactions-options {
+    position: absolute;
+    top: -40px; }
+    .video-player .sharing-options .btn, .video-player .reactions-options .btn {
+      border-radius: 0; }
+    .video-player .sharing-options h3, .video-player .reactions-options h3 {
+      font-size: .8em;
+      background: #222222;
+      text-transform: uppercase;
+      padding: 10px;
+      min-width: 75px;
+      text-align: center;
+      margin: 0; }
+  .video-player .sharing-options {
+    left: -75px; }
+    .video-player .sharing-options .btn {
+      width: 100px;
+      text-align: left; }
+  .video-player .reactions-options {
+    right: -60px; }
+    .video-player .reactions-options .btn-inverse {
+      background: #333333;
+      font-size: 1.5em;
+      font-family: 'Impact';
+      width: 75px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid black; }
+      .video-player .reactions-options .btn-inverse.selected {
+        background: #d9534f; }
+      .video-player .reactions-options .btn-inverse:hover, .video-player .reactions-options .btn-inverse:focus {
+        color: white; }
 
 .video-header {
   border-bottom: 1px #555555 dotted;

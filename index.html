@@ -19,7 +19,10 @@
     <section class="container">
       <!-- Video player -->
       <div class="video-player" ng-mouseover="showReactions = true" ng-mouseout="showReactions = false">
-        <ul class="sharing-options fade" ng-class="{in: showReactions}">
+        <ul class="sharing-options fade list-unstyled" ng-class="{in: showReactions}">
+          <li>
+            <h3>Share this</h3>
+          </li>
           <li>
             <button class="btn btn-primary" ng-class="{selected: reaction.selected}">
               Facebook
@@ -36,9 +39,12 @@
             </button>
           </li>
         </ul>
-        <ul class="reactions-options fade" ng-class="{in: showReactions}">
+        <ul class="reactions-options fade list-unstyled" ng-class="{in: showReactions}">
+          <li>
+           <h3>React</h3>
+          </li>
           <li ng-repeat="reaction in reactions">
-            <button class="btn btn-inverse" ng-class="{selected: reaction.selected}">
+            <button class="btn btn-inverse" ng-class="{selected: reaction.selected}" ng-click="toggleReaction(reaction)">
               {{reaction.name}}
             </button>
           </li>
