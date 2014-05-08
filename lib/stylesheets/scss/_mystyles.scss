@@ -54,10 +54,6 @@ body {
       &.selected {
         background:$brand-danger;
       }
-      
-      &:hover, &:focus {
-        color:$white;
-      }
     }
   }
 }
@@ -205,12 +201,6 @@ body {
   }
 }
 
-.btn {
-  &:focus {
-    outline:none;
-  }
-}
-
 .comments-reactions {
   background: $white;
   color: $black;
@@ -240,6 +230,44 @@ body {
   .container {
     width:90%;
     max-width:970px;
+  }
+  
+  .reactions-list {
+    @include clearfix;
+    margin-top:100px;
+    
+    li {
+      display:block;
+      float:left;
+      width:14.2857%;
+      padding:0;
+      
+      + li {
+        border-left:1px solid $white;
+      }
+      
+      .btn {
+        font-size:.8em;
+        font-family:'Impact';
+        padding:5px;
+        background:$gray-dark;
+        border-radius:0;
+        display:block;
+        width: 100%;
+        color:$white;
+        
+        &.selected {
+          background:$brand-danger;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  &:focus, &:hover {
+    outline:none;
+    color:$white;
   }
 }
 

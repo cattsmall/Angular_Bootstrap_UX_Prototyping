@@ -5227,8 +5227,6 @@ body {
       border-bottom: 1px solid black; }
       .video-player .reactions-options .btn-inverse.selected {
         background: #d9534f; }
-      .video-player .reactions-options .btn-inverse:hover, .video-player .reactions-options .btn-inverse:focus {
-        color: white; }
 
 .video-header {
   border-bottom: 1px #555555 dotted;
@@ -5320,9 +5318,6 @@ body {
     background: none;
     border: 2px solid white; }
 
-.btn:focus {
-  outline: none; }
-
 .comments-reactions {
   background: white;
   color: black; }
@@ -5341,6 +5336,35 @@ body {
   .comments-reactions .container {
     width: 90%;
     max-width: 970px; }
+  .comments-reactions .reactions-list {
+    margin-top: 100px; }
+    .comments-reactions .reactions-list:before, .comments-reactions .reactions-list:after {
+      content: " ";
+      display: table; }
+    .comments-reactions .reactions-list:after {
+      clear: both; }
+    .comments-reactions .reactions-list li {
+      display: block;
+      float: left;
+      width: 14.2857%;
+      padding: 0; }
+      .comments-reactions .reactions-list li + li {
+        border-left: 1px solid white; }
+      .comments-reactions .reactions-list li .btn {
+        font-size: .8em;
+        font-family: 'Impact';
+        padding: 5px;
+        background: #333333;
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        color: white; }
+        .comments-reactions .reactions-list li .btn.selected {
+          background: #d9534f; }
+
+.btn:focus, .btn:hover {
+  outline: none;
+  color: white; }
 
 .footer {
   padding: 20px;

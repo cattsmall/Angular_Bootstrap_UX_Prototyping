@@ -153,6 +153,13 @@
         <!-- Reactions -->
         <aside class="rection-graph col-md-4">
           <h3>What Are People Saying?</h3>
+          <ul class="reactions-list list-inline">
+            <li ng-repeat="reaction in reactions">
+              <button class="btn btn-inverse" ng-class="{selected: reaction.selected}" ng-click="toggleReaction(reaction)">
+                {{reaction.name}}
+              </button>
+            </li>
+          </ul>
         </aside>
       </div>
     </section>
